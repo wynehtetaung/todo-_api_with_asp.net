@@ -33,7 +33,7 @@ It supports CRUD operations (Create, Read, Update, Delete) with additional featu
 ## Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/todo-api.git
+git clone https://github.com/wynehtetaung/todo-_api_with_asp.net.git
 cd todo-api
 dotnet restore
 dotnet run
