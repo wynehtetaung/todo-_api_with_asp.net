@@ -49,7 +49,7 @@ GET /api/todo
 
 ### Get todo by id
 
-GEt /api/todo/{id}
+GET /api/todo/{id}
 
 ### Create new todo
 
