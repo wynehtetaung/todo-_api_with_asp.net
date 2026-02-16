@@ -1,0 +1,29 @@
+# Build results
+bin/
+obj/
+Debug/
+Release/
+artifacts/
+
+# Visual Studio files
+.vs/
+*.user
+*.suo
+
+# Logs
+*.log
+logs/
+
+# NuGet packages
+*.nupkg
+*.snupkg
+
+# Environment variables
+.env
+
+# Test results
+TestResults/
+CodeCoverage/
+
+# MSBuild logs
+*.binlog
