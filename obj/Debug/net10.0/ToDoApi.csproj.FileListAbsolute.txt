@@ -37,3 +37,4 @@
 /home/wynehtet/Hnaung/web_workspace/ToDoApi/obj/Debug/net10.0/ToDoApi.pdb
 /home/wynehtet/Hnaung/web_workspace/ToDoApi/obj/Debug/net10.0/ToDoApi.genruntimeconfig.cache
 /home/wynehtet/Hnaung/web_workspace/ToDoApi/obj/Debug/net10.0/ref/ToDoApi.dll
+/home/wynehtet/Hnaung/web_workspace/ToDoApi/obj/Debug/net10.0/ToDoApi.sourcelink.json

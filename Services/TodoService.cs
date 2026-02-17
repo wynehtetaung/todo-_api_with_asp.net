@@ -20,17 +20,18 @@ namespace TodoServiceApi
         public Todo Create(Todo todo) {_todo.InsertOne(todo); return todo;}
         public void Update(string id)
         {
-            var findTodo = _todo.Find(t => t.Id == id ).FirstOrDefault();
-            if(findTodo != null)
+            var updateTodo = _todo.Find(t => t.Id == id ).FirstOrDefault();
+            if(updateTodo != null)
             {
-                findTodo.Check = !findTodo.Check;
-            _todo.ReplaceOne(t => t.Id == id, findTodo);
+                updateTodo.Check = !updateTodo.Check;
+                _todo.ReplaceOne(t => t.Id == id, updateTodo);
             }
         }
 
         public void Update(string id, Todo todo)
         {
-            _todo.ReplaceOne(t => t.Id == id,todo);
+            var update = Builders<Todo>.Update.Set(t => t.Item, todo.Item);
+            _todo.UpdateOne(t => t.Id == id, update);
         }
             
         public void Delete(string id) => _todo.DeleteOne(t => t.Id == id);

@@ -48,7 +48,6 @@ public class TodoController : ControllerBase
     [HttpPut("{id}")]
     public ActionResult<Todo> Update(string id, Todo todo)
     {
-        Console.WriteLine(todo);
         _service.Update(id, todo);
         return Ok(new {message = "item updated"});
     }
@@ -56,6 +55,11 @@ public class TodoController : ControllerBase
     [HttpDelete("{id}")]
     public ActionResult<Todo> Delete(string id)
     {
+        var todoList = _service.Get();
+        if(!todoList.Any(t => t.Id == id))
+        {
+            return NotFound(new {message = "item not found!"});
+        }
         _service.Delete(id);
         return NoContent();
     }
